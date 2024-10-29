@@ -27,7 +27,7 @@ public class ShopController {
     private ShopService favoriteService;
 
     @GetMapping("/search")
-    public List<Product> searchProducts(@RequestParam String query) {
+    public List<Product> searchProducts(@RequestParam("query") String query) {
         return naverShoppingService.searchProducts(query);
     }
 
@@ -38,7 +38,7 @@ public class ShopController {
     }
 
     @GetMapping("/favorites")
-    public List<Favorite> getFavorites(@RequestParam int userId) {
+    public List<Favorite> getFavorites(@RequestParam("userId") int userId) {
         return favoriteService.getFavoritesByUserId(userId);
     }
 }
