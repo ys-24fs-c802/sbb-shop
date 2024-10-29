@@ -9,5 +9,5 @@ import kr.co.cofile.sbbshop.dto.Favorite;
 @Mapper
 public interface ShopMapper {
     void insertFavorite(Favorite favorite);
-    List<Favorite> selectFavoritesByUserId(int userId);
+    List<Favorite> selectFavoritesByUserId(Long userId);
 }

@@ -38,7 +38,7 @@ public class ShopController {
     }
 
     @GetMapping("/favorites")
-    public List<Favorite> getFavorites(@RequestParam("userId") int userId) {
+    public List<Favorite> getFavorites(@RequestParam("userId") long userId) {
         return favoriteService.getFavoritesByUserId(userId);
     }
 }
